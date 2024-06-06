@@ -1,5 +1,6 @@
 console.log('comics');
 
+// Idea inicial para informacion del cliente
 window.onload = function () {
     var nombre = prompt("Por favor, ingresa tu nombre y apellido:");
     var edad = prompt("Por favor, ingresa tu edad:");
@@ -12,7 +13,7 @@ window.onload = function () {
 };
 
 
-
+// Calculo total mas chequeo de stock disponible
 function calcularTotal(carrito) {
     let total = 0;
     for (let i = 0; i < carrito.length; i++) {
@@ -20,7 +21,6 @@ function calcularTotal(carrito) {
     }
     return total;
 }
-
 
 var inventario = {
     "producto1": 10,
@@ -64,6 +64,54 @@ var productosComics = [
     }
 ];
 
+// probando funcion superior for each
+productosComics.forEach(function (producto) {
+    console.log("Título:", producto.titulo);
+    console.log("Autor:", producto.autor);
+    console.log("Precio:", producto.precio);
+    console.log("Stock:", producto.stock);
+    console.log("-------------------------");
+});
+
+//practica de filter
+var productosCaros = productosComics.filter(function (producto) {
+    return producto.precio > 12500; // Filtrar productos con precio mayor a 12500
+});
+
+console.log("Productos caros:");
+console.log(productosCaros);
+
+
+// Crear una lista de productos
+console.log("Lista de productos:");
+for (var i = 0; i < productosComics.length; i++) {
+    console.log(i + 1 + ". " + productosComics[i].titulo);
+}
+
+// Bucle para seleccionar comics
+var seleccionado = false;
+for (var i = 0; i < productosComics.length; i++) {
+    var respuesta = confirm("¿Quieres comprar " + productosComics[i].titulo + "?");
+    if (respuesta) {
+        console.log("Producto seleccionado:");
+        console.log("Título:", productosComics[i].titulo);
+        console.log("Autor:", productosComics[i].autor);
+        console.log("Precio:", productosComics[i].precio);
+        console.log("Stock:", productosComics[i].stock);
+        seleccionado = true;
+
+    } else {
+        console.log("Compra cancelada.");
+        break;
+    }
+}
+
+// Alerta de cancelación de compra si no se seleccionó ningún comic
+if (!seleccionado) {
+    alert("Compra cancelada.");
+}
+
+
 //mostrar todos los productos en la tienda
 function mostrarProductos() {
     console.log("Productos disponibles en la tienda de cómics:");
@@ -76,7 +124,7 @@ function mostrarProductos() {
     });
 }
 
-//buscar un producto por título
+//busqueda de un producto
 function buscarProducto(titulo) {
     var comicEncontrado = productosComics.find(function (comic) {
         return comic.titulo === titulo;
@@ -91,8 +139,7 @@ function buscarProducto(titulo) {
         console.log("El comic no está disponible en la tienda.");
     }
 }
-
-
+//practica de stock
 var producto = "producto1";
 var cantidad = 3;
 
@@ -105,6 +152,7 @@ if (tieneStock(producto, cantidad)) {
 var carrito = [];
 var envioGratis = false;
 
+// Calculo de envio gratis o costo de envio
 function agregarAlCarrito() {
     var precioProducto = parseFloat(document.getElementById("precio").value);
     if (!isNaN(precioProducto)) {
@@ -127,7 +175,7 @@ function calcularTotal() {
         mensaje = "Costo de envío: $2000";
     }
 
-mensaje += "<br>Precio total: $" + precioTotal.toFixed(2);
+    mensaje += "<br>Precio total: $" + precioTotal.toFixed(2);
 
     document.getElementById("resultado").innerHTML = mensaje;
 }
@@ -139,3 +187,18 @@ const cerrar = document.querySelector("#cerrar");
 abrir.addEventListener("click", () => { nav.classList.add("visible") })
 
 cerrar.addEventListener("click", () => { nav.classList.remove("visible") })
+
+//creando clase de ejemplo con comic batman the dark knight returns
+class Comic {
+    constructor(titulo, autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    mostrarInfo() {
+        console.log("Título:", this.titulo);
+        console.log("Autor:", this.autor);
+    }
+}
+var comicBatman = new Comic("Batman: The Dark Knight Returns", "Frank Miller");
+comicBatman.mostrarInfo();
