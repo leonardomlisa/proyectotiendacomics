@@ -91,3 +91,26 @@ padding: 2rem;}
         align-items: end;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 0.5rem; /* Reduce aún más el padding para tamaños de pantalla muy pequeños */
+    }
+
+    .logo {
+        max-width: 3rem; /* Reduce aún más el tamaño del logo */
+    }
+
+    .lista.visible {
+        flex-direction: row; /* Cambia de nuevo la dirección de la lista a fila */
+        justify-content: space-around; /* Distribuye los elementos de la lista uniformemente */
+    }
+
+    .abrir-menu {
+        display: none; /* Oculta el botón de abrir menú en tamaños de pantalla muy pequeños */
+    }
+
+    .cerrar-menu {
+        display: block; /* Muestra el botón de cerrar menú en tamaños de pantalla muy pequeños */
+    }
+}
