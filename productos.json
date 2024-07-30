@@ -1,0 +1,95 @@
+[
+    {
+        "title": "Three jokers",
+        "price": "17000",
+        "image": "./css/assets/img/3joker.jpg"
+    },
+    {
+        "title": "Batman Caballero Blanco",
+        "price": "20000",
+        "image": "./css/assets/img/caballeroblanco.png"
+    },
+    {
+        "title": "Batman Hush",
+        "price": "16000",
+        "image": "./css/assets/img/hush.png"
+    },
+    {
+        "title": "Batman año uno",
+        "price": "9000",
+        "image": "./css/assets/img/año1.png"
+    },
+    {
+        "title": "Batman un largo Halloween",
+        "price": "23000",
+        "image": "./css/assets/img/halloween.png"
+    },
+    {
+        "title": "Batman renacimiento",
+        "price": "12000",
+        "image": "./css/assets/img/batmanrenacimiento.jpg"
+    }
+
+    ,{
+        "title": "Daredevil el fin de los dias",
+        "price": "19000",
+        "image": "../css/assets/img/daredevil.jpg"
+    },
+    {
+        "title": "Ironman Extremis",
+        "price": "20000",
+        "image": "../css/assets/img/ironmanextremis.jpg"
+    },
+    {
+        "title": "Los Nuevos Vengadores",
+        "price": "45000",
+        "image": "../css/assets/img/losnuevosvengadores.jpg"
+    },
+    {
+        "title": "Planeta Hulk",
+        "price": "27000",
+        "image": "../css/assets/img/planethulk.jpg"
+    },
+    {
+        "title": "Universo Spiderman",
+        "price": "26000",
+        "image": "../css/assets/img/universospiderman.jpg"
+    },
+    {
+        "title": "X-Men Era de Apocalipsis",
+        "price": "12000",
+        "image": "../css/assets/img/xmen.jpg"
+    }
+
+    ,{
+        "title": "Aquaman la muerte de un rey",
+        "price": "18000",
+        "image": "../css/assets/img/Aquamanmuertedeunrey.jpg"
+    },
+    {
+        "title": "Flashpoint",
+        "price": "30000",
+        "image": "../css/assets/img/flashpoint.jpg"
+    },
+    {
+        "title": "Linterna Verde Caballeros Esmeralda",
+        "price": "15000",
+        "image": "../css/assets/img/greenlantern.jpg"
+    },
+    {
+        "title": "Liga de la Justicia los nuevos 52",
+        "price": "50000",
+        "image": "../css/assets/img/justiceleaguenew52.jpg"
+    },
+    {
+        "title": "Superman Renacido",
+        "price": "27000",
+        "image": "../css/assets/img/supermanrenacido.jpg"
+    },
+    {
+        "title": "Mujer Maravilla Sensacional",
+        "price": "19000",
+        "image": "../css/assets/img/wonderwomansensacional.jpg"
+    }
+]
+
