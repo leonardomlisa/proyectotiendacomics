@@ -1,7 +1,6 @@
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector('.container-cart-products');
 const valorTotal = document.querySelector('.total-pagar');
-const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
 const productsList = document.querySelector('.container-items');
 const countProducts = document.querySelector('#contador-productos');
@@ -45,16 +44,28 @@ const displayCart = () => {
 
     valorTotal.textContent = `$${total.toFixed(2)}`;
     countProducts.textContent = allProducts.reduce((sum, product) => sum + product.quantity, 0);
+
+
+    if (total >= 40000) {
+        Swal.fire({
+            icon: 'info',
+            title: '¡Envío gratis!',
+            text: 'Tu compra es mayor a $40,000, ¡así que te ofrecemos envío gratis!',
+        });
+    }
 };
+
 
 const updateCart = () => {
     localStorage.setItem('cart', JSON.stringify(allProducts));
     displayCart();
 };
 
+
 btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart');
 });
+
 
 productsList.addEventListener('click', e => {
     if (e.target.classList.contains('btn-add-cart')) {
@@ -84,6 +95,7 @@ productsList.addEventListener('click', e => {
     }
 });
 
+
 rowProduct.addEventListener('click', e => {
     if (e.target.classList.contains('icon-close')) {
         const product = e.target.parentElement;
@@ -96,4 +108,3 @@ rowProduct.addEventListener('click', e => {
 });
 
 displayCart();
-
